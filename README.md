@@ -4,7 +4,7 @@
 
 Moves the required column or columns to the beginning of the table i.e. the left hand side of the table
 
-```mcode
+```M
 // fxMoveColumnToStart
 let func = 
     (TableName as table, ColumnsToMove as list) as table =>
