@@ -1,4 +1,5 @@
 // fxMoveColumnToStart
+// fxMoveColumnToStart
 let func = 
     (TableName as table, ColumnsToMove as list) as table =>
     let
@@ -21,51 +22,19 @@ let func =
             Documentation.Author = "Cox, Graham",
             Documentation.Examples = {
                 [
-                    Description = "<br>The `TableName` parameter is the name of the previous step in the query calling the function. <br><br>The `ColumnsToMove` parameter must be in the form of a list and contain the name or names of columns in quotes and in the required order once the columns have been moved",
-                    Code = " 
-EXAMPLE 1
-let
-    Source = #table(
-        type table[Index = number, Name = text, Date = date, Amount = number],
-            { 
-                {1, ""Apple"", #date(2022, 11, 17), 123.45}, 
-                {2, ""Orange"", #date(2022, 10, 17), 456.21} 
-            } 
-        ),
-    MoveColumn = fxMoveColumnToStart(Source, {""Date""})
-in
-    MoveColumn
-    
-EXAMPLE 2
-let
-    Source = #table(
-        type table[Index = number, Name = text, Date = date, Amount = number],
-            { 
-                {1, ""Apple"", #date(2022, 11, 17), 123.45}, 
-                {2, ""Orange"", #date(2022, 10, 17), 456.21} 
-            } 
-        ),
-    MoveColumn = fxMoveColumnToStart(Source, {""Amount"", ""Date""})
-in
-    MoveColumn",
-        Result = " 
-EXAMPLE 1 RESULT
-#table(
-    type table[Date = date, Index = number, Name = text, Amount = number],
-    { 
-        {#date(2022, 11, 17), 1, ""Apple"", 123.45}, 
-        {#date(2022, 10, 17), 2, ""Orange"", 456.21} 
-    }
-)
+                    Description = "
+`TableName` is the name of the previous step in the query calling the function. 
+`ColumnsToMove` must be in the form of a list and contain the name or names of columns in quotes and in the required order once the columns have been moved",
+                    Code = "
+Example 1 - Move the column named `Date` to the left hand side of the table.
+fxMoveColumnToStart(Source, {""Date""})
 
-EXAMPLE 2 RESULT
-#table(
-    type table[Amount = number, Date = date, Index = number, Name = text],
-    { 
-        {123.45, #date(2022, 11, 17), 1, ""Apple""}, 
-        {456.21, #date(2022, 10, 17), 2, ""Orange""} 
-    }
-)"
-        ] } ]
+Example 2 - Move the columns named `Project` and `Date` to the left hand side of the table
+fxMoveColumnToStart(Source, {""Project"", ""Date""})
+",
+Result = ""
+                ]
+            }
+            ]
 in
     Value.ReplaceType(func, Value.ReplaceMetadata(Value.Type(func), documentation))
