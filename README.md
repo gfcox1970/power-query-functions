@@ -31,7 +31,7 @@ fxMoveColumnToStart(Source, {"Project", "Date"})
 
 ## fxMoveColumnToEnd
 
-### [fxMOveColumnToEnd](fxMoveColumnToEnd.pq)
+### [fxMoveColumnToEnd](fxMoveColumnToEnd.pq)
 
 ### Parameters
 
