@@ -15,7 +15,9 @@ Moving a column or multiple columns to the beginning of a table in Power Query c
 
 Move the column named `Date` to the left hand side of the table.
 
+```mcode
 fxMoveColumnToStart(Source, {""Date""})
+```
 
 **Example 2**
 
@@ -39,7 +41,10 @@ fxMoveColumnToStart(Source, {""Project"", ""Date""})
 **Example 1**
 
 Move the column named `Date` to the right hand side of the table.
+
+```mcode
 fxMoveColumnToStart(Source, {""Date""})
+```
 
 **Example 2**
 
