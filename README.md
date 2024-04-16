@@ -8,8 +8,8 @@ Moving a column or multiple columns to the beginning of a table in Power Query c
 
 ### Parameters
 
-`Source` - The name of the previous Power Query step that contains the required columns to move
-`ColumnsToMove` - The names of the columns to be moved. Column names must be in the form of a list i.e. within curly brackets
+- `Source` - The name of the previous Power Query step that contains the required columns to move
+- `ColumnsToMove` - The names of the columns to be moved. Column names must be in the form of a list i.e. within curly brackets
 
 **Example 1**
 
@@ -35,8 +35,8 @@ fxMoveColumnToStart(Source, {"Project", "Date"})
 
 ### Parameters
 
-`Source` - The name of the previous Power Query step that contains the required columns to move
-`ColumnsToMove` - The names of the columns to be moved. Column names must be in the form of a list i.e. within curly brackets
+- `Source` - The name of the previous Power Query step that contains the required columns to move
+- `ColumnsToMove` - The names of the columns to be moved. Column names must be in the form of a list i.e. within curly brackets
 
 **Example 1**
 
